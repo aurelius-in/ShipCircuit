@@ -3,6 +3,7 @@
 </p>
 
 ```mermaid
+
 flowchart TB
   %% ShipCircuit Agent Mesh
 
@@ -100,6 +101,7 @@ flowchart TB
 
   %% External touchpoints
   classDef ext fill:#eee,stroke:#333,color:#333,stroke-width:1px;
+
 ```
 
 **Agentic logistics control tower** that plans, routes, and protects service from booking to delivery with auditable decisions.
