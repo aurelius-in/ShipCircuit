@@ -91,16 +91,13 @@ flowchart TB
   F2 --> F3
   F4 --> A3
 
-  %% Guardrails & quality
-  A6 -. approval/receipts .- C2
-  A6 -. approval/receipts .- D1
-  A6 -. approval/receipts .- B7
-  A7 -. data checks .- B4
-  A7 -. data checks .- C1
-  A7 -. data checks .- E2
-
-  %% External touchpoints
-  classDef ext fill:#eee,stroke:#333,color:#333,stroke-width:1px;
+  %% Guardrails & quality (use dotted edges with labels)
+  A6 -. "approval/receipts" .-> C2
+  A6 -. "approval/receipts" .-> D1
+  A6 -. "approval/receipts" .-> B7
+  A7 -. "data checks" .-> B4
+  A7 -. "data checks" .-> C1
+  A7 -. "data checks" .-> E2
 
 ```
 
