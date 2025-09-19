@@ -2,6 +2,106 @@
   <img src="./shipcircuit.png" alt="ShipCircuit logo" width="240">
 </p>
 
+```mermaid
+flowchart TB
+  %% ShipCircuit Agent Mesh
+
+  subgraph A[Planning & Governance]
+    A1[Demand Forecaster]
+    A2[Sales/Booking Listener]
+    A3[Network Yield & Pricing Optimizer]
+    A4[Capacity & Labor Orchestrator]
+    A5[Roster Bidder & Micro-Incentives]
+    A6[Trust & Policy Guard]
+    A7[Data Quality Sheriff]
+  end
+
+  subgraph B[Facility & Sort]
+    B1[Dock & Yard Scheduler]
+    B2[Trailer/ULD Build Planner]
+    B3[Slotting & Pick-Path Optimizer]
+    B4[Exception Vision Hunter]
+    B5[Dangerous Goods Guardian]
+    B6[Safety & Incident Triage]
+    B7[Hub Wave Orchestrator]
+  end
+
+  subgraph C[Linehaul & Partners]
+    C1[Linehaul Router]
+    C2[Partner/Interline Evaluator]
+  end
+
+  subgraph D[Cross-Border & Compliance]
+    D1[Customs Packager (HS/Docs/EEI)]
+    D2[Sanctions/Denied-Party Checker]
+    D3[Trade & Tariff Simulator]
+  end
+
+  subgraph E[Last-Mile & Fleet]
+    E1[EV/Battery Fleet Guardian]
+    E2[Last-Mile Route Agent]
+    E3[Pickup Density Builder]
+    E4[Driver Copilot]
+    E5[Proactive ETA & Promise Keeper]
+  end
+
+  subgraph F[Commercial, Claims & Returns]
+    F1[Claims & Refund Arbiter]
+    F2[Returns Profitability Agent]
+    F3[Contract & Accessorial Copilot]
+    F4[Key-Account QBR Agent]
+  end
+
+  subgraph G[Developer & Data Enablement]
+    G1[API Copilot for Shippers]
+    G2[Data Contracts Librarian]
+  end
+
+  %% High-level flows
+  A1 --> A4
+  A2 --> A1
+  A3 --> C1
+  A4 --> B1
+  A5 --> A4
+  A7 --> A6
+  A6 --> B1
+
+  B1 --> B2
+  B2 --> B3
+  B3 --> B7
+  B4 --> B6
+  B5 --> A6
+  B7 --> C1
+
+  C1 --> D1
+  C2 --> C1
+  D1 --> D2
+  D2 --> A6
+  D3 --> C1
+
+  C1 --> E2
+  E1 --> E2
+  E2 --> E5
+  E3 --> E2
+  E4 --> E5
+
+  E5 --> F1
+  F1 --> F3
+  F2 --> F3
+  F4 --> A3
+
+  %% Guardrails & quality
+  A6 -. approval/receipts .- C2
+  A6 -. approval/receipts .- D1
+  A6 -. approval/receipts .- B7
+  A7 -. data checks .- B4
+  A7 -. data checks .- C1
+  A7 -. data checks .- E2
+
+  %% External touchpoints
+  classDef ext fill:#eee,stroke:#333,color:#333,stroke-width:1px;
+```
+
 **Agentic logistics control tower** that plans, routes, and protects service from booking to delivery with auditable decisions.
 
 ShipCircuit coordinates specialized AI agents across forecasting, labor, yard, sort, linehaul, cross-border, last mile, claims, and account health. Every action creates a signed receipt so operations can automate safely.
