@@ -1,4 +1,6 @@
-# ShipCircuit
+<p align="center">
+  <img src="./shipcircuit.png" alt="ShipCircuit logo" width="240">
+</p>
 
 **Agentic logistics control tower** that plans, routes, and protects service from booking to delivery with auditable decisions.
 
