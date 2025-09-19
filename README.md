@@ -7,55 +7,55 @@
 flowchart TB
   %% ShipCircuit Agent Mesh
 
-  subgraph A[Planning & Governance]
-    A1[Demand Forecaster]
-    A2[Sales/Booking Listener]
-    A3[Network Yield & Pricing Optimizer]
-    A4[Capacity & Labor Orchestrator]
-    A5[Roster Bidder & Micro-Incentives]
-    A6[Trust & Policy Guard]
-    A7[Data Quality Sheriff]
+  subgraph A["Planning & Governance"]
+    A1["Demand Forecaster"]
+    A2["Sales/Booking Listener"]
+    A3["Network Yield & Pricing Optimizer"]
+    A4["Capacity & Labor Orchestrator"]
+    A5["Roster Bidder & Micro-Incentives"]
+    A6["Trust & Policy Guard"]
+    A7["Data Quality Sheriff"]
   end
 
-  subgraph B[Facility & Sort]
-    B1[Dock & Yard Scheduler]
-    B2[Trailer/ULD Build Planner]
-    B3[Slotting & Pick-Path Optimizer]
-    B4[Exception Vision Hunter]
-    B5[Dangerous Goods Guardian]
-    B6[Safety & Incident Triage]
-    B7[Hub Wave Orchestrator]
+  subgraph B["Facility & Sort"]
+    B1["Dock & Yard Scheduler"]
+    B2["Trailer/ULD Build Planner"]
+    B3["Slotting & Pick-Path Optimizer"]
+    B4["Exception Vision Hunter"]
+    B5["Dangerous Goods Guardian"]
+    B6["Safety & Incident Triage"]
+    B7["Hub Wave Orchestrator"]
   end
 
-  subgraph C[Linehaul & Partners]
-    C1[Linehaul Router]
-    C2[Partner/Interline Evaluator]
+  subgraph C["Linehaul & Partners"]
+    C1["Linehaul Router"]
+    C2["Partner/Interline Evaluator"]
   end
 
-  subgraph D[Cross-Border & Compliance]
-    D1[Customs Packager (HS/Docs/EEI)]
-    D2[Sanctions/Denied-Party Checker]
-    D3[Trade & Tariff Simulator]
+  subgraph D["Cross-Border & Compliance"]
+    D1["Customs Packager (HS/Docs/EEI)"]
+    D2["Sanctions/Denied-Party Checker"]
+    D3["Trade & Tariff Simulator"]
   end
 
-  subgraph E[Last-Mile & Fleet]
-    E1[EV/Battery Fleet Guardian]
-    E2[Last-Mile Route Agent]
-    E3[Pickup Density Builder]
-    E4[Driver Copilot]
-    E5[Proactive ETA & Promise Keeper]
+  subgraph E["Last-Mile & Fleet"]
+    E1["EV/Battery Fleet Guardian"]
+    E2["Last-Mile Route Agent"]
+    E3["Pickup Density Builder"]
+    E4["Driver Copilot"]
+    E5["Proactive ETA & Promise Keeper"]
   end
 
-  subgraph F[Commercial, Claims & Returns]
-    F1[Claims & Refund Arbiter]
-    F2[Returns Profitability Agent]
-    F3[Contract & Accessorial Copilot]
-    F4[Key-Account QBR Agent]
+  subgraph F["Commercial, Claims & Returns"]
+    F1["Claims & Refund Arbiter"]
+    F2["Returns Profitability Agent"]
+    F3["Contract & Accessorial Copilot"]
+    F4["Key-Account QBR Agent"]
   end
 
-  subgraph G[Developer & Data Enablement]
-    G1[API Copilot for Shippers]
-    G2[Data Contracts Librarian]
+  subgraph G["Developer & Data Enablement"]
+    G1["API Copilot for Shippers"]
+    G2["Data Contracts Librarian"]
   end
 
   %% High-level flows
@@ -91,7 +91,7 @@ flowchart TB
   F2 --> F3
   F4 --> A3
 
-  %% Guardrails & quality (use dotted edges with labels)
+  %% Guardrails & quality (dotted edges with labels)
   A6 -. "approval/receipts" .-> C2
   A6 -. "approval/receipts" .-> D1
   A6 -. "approval/receipts" .-> B7
